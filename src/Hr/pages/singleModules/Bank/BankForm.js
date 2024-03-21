@@ -156,6 +156,7 @@ const BankForm = ({ formData,setFormData, setFormVisible,setToggle }) => {
   const saveAddbank = async () => {
     await bankapi.saveAddbank(formData);
     navigate("/hr/bank/add-bank ");
+    window.location.reload(true);
     setFormData({
       bankName: "",
       accountName: "",

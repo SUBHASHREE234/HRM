@@ -89,6 +89,7 @@ const AnnouncementForm = ({formData,setFormData,setFormVisible, setToggle }) => 
       const saveAnnouncements = async () => {
         await api.saveAnnouncements(formData)
         navigate("/hr/organisation/announcements");
+        window.location.reload(true);
         setFormData({
           title: "",
           startDate: "",

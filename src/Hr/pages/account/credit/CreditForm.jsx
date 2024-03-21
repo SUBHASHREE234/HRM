@@ -257,6 +257,7 @@ const CreditForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
     try {
       await CreditApi.saveCredit(formData);
       navigate("/hr/account/credit-voucher");
+      window.location.reload(true);
       CreditApi.loadCredit();
       setGenId(genId + 1);
       handleClose();

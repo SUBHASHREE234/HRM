@@ -137,6 +137,7 @@ const WorksheetForm = ({
   const saveWorksheet = async () => {
     await api.saveWorksheet(formData);
     navigate("/hr/worksheets");
+    window.location.reload(true);
     setFormData({
       username: "",
       workSheetTitle: "",

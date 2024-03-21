@@ -32,6 +32,7 @@ const CandidateForm = ({ formData, setFormData, setFormVisible, setToggle }) => 
     await api.saveCandidate(formData);
     window.location.reload();
     navigate("/hr/recruitment/candidate");
+    window.location.reload(true);
 
     setFormData({
       name: "",

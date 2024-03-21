@@ -315,6 +315,7 @@ const DebitForm = ({ formData, setFormData, setToggle, setFormVisible }) => {
     try {
       await DebitApi.saveDebit(formData);
       navigate("hr/account/debit");
+      window.location.reload(true);
       DebitApi.loadDebit();
       setFormData({
         voucherType: "",

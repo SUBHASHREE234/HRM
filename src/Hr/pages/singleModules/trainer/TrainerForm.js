@@ -34,6 +34,7 @@ const TrainerForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
   const saveTrainer = async () => {
     await api.saveTrainer(formData);
     navigate("/hr/trainer");
+    window.location.reload(true);
     setFormData({
       trainersFullName: "",
       emailAddress: "",
@@ -452,8 +453,7 @@ const TrainerForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
           id="trainingLanguages"
           margin="dense"
           select
-          //  label="Priority"
-          // type="text"
+
           fullWidth
           defaultValue="Choose"
           SelectProps={{

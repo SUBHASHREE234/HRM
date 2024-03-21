@@ -56,6 +56,7 @@ const OfficeShiftForm = ({ formData, setFormData, setOpen }) => {
   const saveOfficeShift = async () => {
     await api.saveOfficeShift(formData);
     navigate("/hr/timesheets/officeshift");
+    window.location.reload(true);
     setFormData({
       createdDate: "",
       officeClockIn: "",

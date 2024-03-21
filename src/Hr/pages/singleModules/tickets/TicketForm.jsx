@@ -47,6 +47,8 @@ const TicketForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
   const saveTicket = async () => {
     await api.saveTicket(formData);
     navigate("/hr/ticket");
+    window.location.reload(true);
+    window.location.reload(true);
     setFormData({
       ticketsCode: "",
       subject: "",

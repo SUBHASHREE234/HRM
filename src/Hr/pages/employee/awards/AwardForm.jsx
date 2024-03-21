@@ -97,6 +97,7 @@ const AwardForm = ({ formData, setFormData, setOpen }) => {
   const saveAward = async () => {
     await api.saveAward(formData);
     navigate("/hr/employee/awards");
+    window.location.reload(true);
     setFormData({
       awardName: "",
       awardDescription: "",

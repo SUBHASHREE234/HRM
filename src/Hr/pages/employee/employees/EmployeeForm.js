@@ -660,6 +660,7 @@ const EmployeeForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
     e.preventDefault();
     await api.saveEmployees(formData);
     navigate("/hr/employee/employee");
+    window.location.reload(true);
     loademployees();
     window.location.reload();
     setFormData({
@@ -2153,7 +2154,6 @@ const EmployeeForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
                       onChange={(e) => handleInputChange(e)}
                       required
                     />
-
                     <TextField
                       margin="dense"
                       label="Upload Document"

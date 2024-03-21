@@ -147,6 +147,7 @@ const InterviewForm = ({formData, setFormData, setFormVisible, setToggle}) => {
     await api.saveInterview(formData);
     handleClose();
     navigate("/hr/recruitment/Interview");
+    window.location.reload(true);
     loadInterview();
     setFormData({
       candidateEmailId: " ",

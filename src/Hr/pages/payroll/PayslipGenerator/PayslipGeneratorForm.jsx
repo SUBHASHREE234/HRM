@@ -140,6 +140,7 @@ const PayslipGeneratorForm = ({
   const savePayslipGenerator = async () => {
     await api.savePayslipGenerator(formData);
     navigate("/hr/payroll/salary-template ");
+    window.location.reload(true);
     loadPayslipGenerator();
     setFormData({
       username: "",

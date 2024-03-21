@@ -93,6 +93,7 @@ const ProjectForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
   const saveProject = async () => {
     await api.saveProject(formData);
     navigate("/hr/project");
+    window.location.reload(true);
     setFormData({
       projectsId: "",
       projectTitle: "",

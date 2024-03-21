@@ -53,6 +53,7 @@ const Unitform = ({formData,setFormData, setOpen}) => {
       await api.saveUnit(formData);
 
       navigate("/hr/procurement/unit");
+      window.location.reload(true);
       setFormData({
         unitName:"",
       

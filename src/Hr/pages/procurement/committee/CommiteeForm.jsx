@@ -52,6 +52,7 @@ const Committeeform = ({ formData, setFormData, setOpen }) => {
     await api.saveCommittee(formData);
 
     navigate("/hr/procurement/committee");
+    window.location.reload(true);
     setFormData({
       name: "",
       signature: "",

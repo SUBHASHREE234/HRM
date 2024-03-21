@@ -86,6 +86,7 @@ const LocationForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
   const saveLocation = async (e) => {
     await api.saveLocation(formData);
     navigate("/hr/organisation/location");
+    window.location.reload(true);
     setFormData({
       companyName: "",
       locationHead: "",

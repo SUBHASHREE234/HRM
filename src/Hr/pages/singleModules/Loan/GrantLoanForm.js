@@ -46,6 +46,7 @@ const GrantLoanForm = ({
   const saveLoan = async () => {
     await loanapi.saveLoan(formData);
     navigate("/hr/loan/grant-loan");
+    window.location.reload(true);
     setFormData({
       employeeName: "",
       username:"",

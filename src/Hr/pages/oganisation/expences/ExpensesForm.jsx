@@ -278,6 +278,7 @@ const ExpensesForm = ({
     try {
       await ExpensesApi.saveExpenses(formData);
       navigate("/hr/organisation/expenses");
+      window.location.reload(true);
       ExpensesApi.loadExpenses();
       setFormData({
         expenseID: "",

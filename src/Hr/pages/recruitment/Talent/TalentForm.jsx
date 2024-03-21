@@ -120,6 +120,7 @@ const TalentForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
     await api.saveTalent(formData);
     alert("Talent added successfully");
     navigate("/hr/recruitment/talents");
+    window.location.reload(true);
 
     setFormData({
       id:"",

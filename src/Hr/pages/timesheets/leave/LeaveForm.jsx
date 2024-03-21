@@ -102,6 +102,7 @@ const LeaveForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
   const saveLeave = async () => {
     await api.saveLeave(formData);
     navigate("/hr/timesheet/leave");
+    window.location.reload(true);
 
     setFormData({
       username: "",

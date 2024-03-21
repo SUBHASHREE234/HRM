@@ -88,6 +88,7 @@ const EmployeeExitForm = ({ formData, setFormData, setOpen }) => {
     await api.saveEmployeeExit(formData);
     handleClose();
     navigate("/hr/employee/employee-exit");
+    window.location.reload(true);
     loadEmployeeExit();
     setFormData({
       employeeName: "",

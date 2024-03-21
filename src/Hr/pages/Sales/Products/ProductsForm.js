@@ -35,6 +35,7 @@ const ProductsForm = ({ formData, setToggle, setFormData, setFormVisible }) => {
   const saveProducts = async () => {
     await ProductsApi.saveProducts(formData);
     navigate("/hr/sales/product");
+    window.location.reload();
     setFormData({
       productPricePerUnit: "",
       noOfClients: "",

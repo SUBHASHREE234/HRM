@@ -72,13 +72,10 @@ const AttendanceForm = ({
     }
   };
 
-  
-   
-
   const saveAttendance = async () => {
     await api.saveAttendance(formData);
     navigate("/hr/timesheets/attendance");
-
+    window.location.reload(true);
     setFormData({
       employeeName: "",
       username: "",

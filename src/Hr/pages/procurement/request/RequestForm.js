@@ -117,6 +117,7 @@ const RequestForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
     try {
       await RequestApi.saveRequest(formData);
       navigate("/hr/procurement/request");
+      window.location.reload(true);
       RequestApi.loadRequest();
       setFormData({
         requestId: 0,

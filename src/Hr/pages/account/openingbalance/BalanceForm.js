@@ -159,6 +159,7 @@ const BalanceForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
     try {
       await BalanceApi.saveBalance(formData);
       navigate("/hr/account/opening-balance");
+      window.location.reload(true);
       BalanceApi.loadBalance();
       setGenId(genId + 1);
       handleClose();

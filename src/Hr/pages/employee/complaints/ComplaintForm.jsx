@@ -121,6 +121,7 @@ const ComplaintForm = ({
   const saveComplaint = async () => {
     await api.saveComplaint(formData);
     navigate("/hr/employee/complaints");
+    window.location.reload(true);
 
     setFormData({
       employeeName: "",

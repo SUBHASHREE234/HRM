@@ -58,7 +58,7 @@ const Designationform = ({ formData, setFormData, setOpen }) => {
   const saveDesignation = async () => {
     await api.saveDesignation(formData);
     navigate("/hr/organisation/designation");
-
+    window.location.reload(true);
     handleClose();
   };
 

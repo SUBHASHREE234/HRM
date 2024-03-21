@@ -45,6 +45,7 @@ const FinancialYearForm = ({ formData, setFormData, setOpen }) => {
     try {
       await api.saveFinancialYear(formData);
       navigate("/hr/account/financial-year");
+      window.location.reload(true);
       loadFinancialYear();
       setFormData({
         financialYear: "",

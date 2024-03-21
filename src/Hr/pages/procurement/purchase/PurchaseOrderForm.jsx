@@ -127,6 +127,7 @@ const PurchaseOrderForm = ({
   const handleItemChange = (id, e) => {
     if (e.target.name === "unitName" && e.target.value === "addNewunit") {
       navigate("/hr/procurement/unit");
+      window.location.reload(true);
       return;
     }
     const updatedItems = items.map((item) =>

@@ -72,6 +72,7 @@ const DepartmentForm = ({formData,setFormData,setFormVisible, setToggle}) => {
         await api.saveDepartment(formData);
         alert("Department added successfully");
         navigate("/hr/organisation/department ");
+        window.location.reload(true);
         
         setFormData({
           locationName: "",

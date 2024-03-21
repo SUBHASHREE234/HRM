@@ -96,6 +96,7 @@ const UserForm = ({formData, setFormData, setFormVisible, setToggle}) => {
     await api.saveUser(formData);
     alert("User added successfully");
     navigate("/hr/recruitment/user ");
+    window.location.reload(true);
 
     setFormData({
       name: "",

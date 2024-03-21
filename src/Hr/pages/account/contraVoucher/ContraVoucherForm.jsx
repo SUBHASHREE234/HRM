@@ -81,6 +81,7 @@ const ContraVoucherForm = ({
     try {
       await ContraVoucherApi.saveContraVoucher(formData);
       navigate("/hr/account/contra-voucher");
+      window.location.reload(true);
       handleClose();
     } catch (error) {
       console.error("Error saving contravoucher:", error);

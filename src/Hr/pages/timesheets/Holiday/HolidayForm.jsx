@@ -65,6 +65,7 @@ const HolidayForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
     const saveHoliday = async () => {
       await api.saveHoliday(formData);
       navigate("/hr/timesheets/holiday ");
+      window.location.reload(true);
       setFormData({
         eventName: "",
         startDate: "",

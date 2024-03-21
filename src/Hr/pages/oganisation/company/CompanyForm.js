@@ -242,6 +242,7 @@ const CompanyForm = ({ formData, setFormData, setFormVisible, setToggle }) => {
     await api.saveCompany(formData);
     alert("Company added successfully");
     navigate("/hr/organisation/company");
+    window.location.reload(true);
     setFormData({
       companyId:"",
       companyName: "",

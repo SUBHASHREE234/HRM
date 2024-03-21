@@ -92,6 +92,7 @@ useEffect(() => {
 
       await api.savePolicies(formData);
       navigate("/hr/organisation/policies");
+      window.location.reload(true);
       setFormData({
         companyName: "",
         title: "",

@@ -143,6 +143,7 @@ const AccountBalanceForm = ({formData,setFormData, setFormVisible, setToggle}) =
     
         await  AccountBalanceApi.saveAccountBalance(formData);
         navigate("/hr/accounts/AccountBalance");
+        window.location.reload(true);
         
         setFormData({
                     employeeName: "",

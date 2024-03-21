@@ -124,6 +124,7 @@ const AppraisalForm = ({
   const savePerformances = async () => {
     await api.savePerformances(formData)
     navigate('/hr/performance/Performance-Appraisal')
+    window.location.reload(true);
     setFormData({
       employeeName: '',
      username: '',
